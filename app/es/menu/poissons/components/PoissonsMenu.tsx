@@ -1,0 +1,327 @@
+'use client';
+
+import React, { useRef, useEffect, useState } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+
+interface MenuItem {
+  name: string;
+  description: string;
+  price: string;
+  portion?: string;
+  detailedDescription?: string;
+  isTitle?: boolean;
+}
+
+interface MenuSection {
+  title: string;
+  items: MenuItem[];
+}
+
+const PoissonViandesMenuItem: React.FC<MenuItem & { onExpand: () => void, isExpanded: boolean }> = ({
+  name,
+  description,
+  price,
+  portion,
+  detailedDescription,
+  onExpand,
+  isExpanded
+}) => {
+  const itemRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    if (isExpanded && itemRef.current) {
+      itemRef.current.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  }, [isExpanded]);
+
+  return (
+    <motion.div
+      ref={itemRef}
+      className="bg-amber-900/20 backdrop-blur-sm rounded-lg p-6 border border-amber-200/20 relative overflow-hidden group"
+      whileHover={{ y: -4 }}
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5 }}
+      onClick={onExpand}
+    >
+      {/* Elementos decorativos */}
+      <div className="absolute top-3 left-3 w-6 h-6 border-t border-l border-amber-200/30"></div>
+      <div className="absolute bottom-3 right-3 w-6 h-6 border-b border-r border-amber-200/30"></div>
+      
+      {/* Contenido */}
+      <div className="relative z-10">
+        <div className="flex justify-between items-start mb-3">
+          <h3 className="font-SweetSansProBold text-xl font-serif tracking-wider text-amber-100">
+            {name}
+          </h3>
+          <span className="text-amber-200 font-light">{price}</span>
+        </div>
+        
+        {/* Información de la porción */}
+        {portion && (
+          <div className="mb-3">
+            <span className="text-xs text-amber-300 bg-amber-500/20 px-2 py-1 rounded">
+              {portion}
+            </span>
+          </div>
+        )}
+        
+        <div className="w-10 h-px bg-amber-200/40 mb-4"></div>
+        
+        <p className="text-amber-100/70 text-sm">
+          {description}
+        </p>
+
+        <AnimatePresence>
+          {isExpanded && detailedDescription && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto', marginTop: 12 }}
+              exit={{ opacity: 0, height: 0, marginTop: 0 }}
+              transition={{ duration: 0.3 }}
+              className="overflow-hidden"
+            >
+              <p className="text-amber-100/80 text-sm pl-4 border-l-2 border-amber-200/50 mt-4">
+                {detailedDescription}
+              </p>
+            </motion.div>
+          )}
+        </AnimatePresence>
+        
+        {detailedDescription && (
+          <div className="mt-4 text-xs text-amber-200 opacity-70 flex items-center">
+            <span className="mr-1">{isExpanded ? 'Menos' : 'Detalles'}</span>
+            <svg 
+              xmlns="http://www.w3.org/2000/svg" 
+              width="12" 
+              height="12" 
+              viewBox="0 0 24 24" 
+              fill="none" 
+              stroke="currentColor" 
+              strokeWidth="2" 
+              strokeLinecap="round" 
+              strokeLinejoin="round"
+              style={{ transform: isExpanded ? 'rotate(180deg)' : 'rotate(0deg)', transition: 'transform 0.3s ease' }}
+            >
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </div>
+        )}
+      </div>
+      
+      {/* Efecto de resaltado */}
+      <div className="absolute -inset-2 bg-gradient-to-tr from-amber-500/5 to-amber-300/10 opacity-0 group-hover:opacity-100 transform translate-y-full group-hover:translate-y-0 transition-all duration-700 rounded-lg"></div>
+    </motion.div>
+  );
+};
+
+const PoissonViandesMenuSection: React.FC<MenuSection> = ({ title, items }) => {
+  const [expandedItem, setExpandedItem] = useState<number | null>(null);
+
+  const handleExpand = (index: number) => {
+    setExpandedItem(expandedItem === index ? null : index);
+  };
+
+  return (
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+      className="mb-20"
+    >
+      <h3 className="font-SweetSansProBold text-center font-serif text-3xl tracking-wider text-amber-100 mb-10">
+        {title}
+      </h3>
+      
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        {items.map((item, index) => (
+          <PoissonViandesMenuItem
+            key={index}
+            {...item}
+            onExpand={() => handleExpand(index)}
+            isExpanded={expandedItem === index}
+          />
+        ))}
+      </div>
+    </motion.div>
+  );
+};
+
+export default function PoissonViandesMenu() {
+  const menuRef = useRef<HTMLElement | null>(null);
+  const [isVisible, setIsVisible] = useState<boolean>(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    if (menuRef.current) {
+      observer.observe(menuRef.current);
+    }
+
+    return () => {
+      if (menuRef.current) {
+        observer.unobserve(menuRef.current);
+      }
+    };
+  }, []);
+
+  // Todos los datos del menú en un solo lugar
+  const menuSections: MenuSection[] = [
+    {
+      title: 'PESCADOS',
+      items: [
+        {
+          name: "GAMBAS ROYALES A LA PLANCHA",
+          price: "200",
+          portion: "1 pieza",
+          description: "Gamba grande a la plancha",
+          detailedDescription: "Gamba royal fresca a la plancha a la perfección, ligeramente sazonada"
+        },
+        {
+          name: "PEZ ESPADA A LA PLANCHA",
+          price: "260",
+          description: "Filete de pez espada a la plancha",
+          detailedDescription: "Filete de pez espada a la plancha, carne firme y sabrosa"
+        },
+        {
+          name: "CALAMARES A LA PLANCHA",
+          price: "280",
+          description: "Calamares a la plancha tiernos",
+          detailedDescription: "Calamares frescos a la plancha, acompañados de limón y aceite de oliva"
+        },
+        {
+          name: "LENGUADO A LA PLANCHA",
+          price: "280",
+          description: "Pescado plano delicado",
+          detailedDescription: "Lenguado fresco a la plancha, carne fina y refinada"
+        },
+        {
+          name: "ATÚN ROJO MEDIO COCIDO",
+          price: "280",
+          description: "Atún sellado a la plancha",
+          detailedDescription: "Filete de atún rojo sellado, tierno en el centro y sabroso"
+        },
+        {
+          name: "SAN PEDRO A LA PLANCHA",
+          price: "320",
+          description: "Pescado noble a la plancha",
+          detailedDescription: "San Pedro fresco a la plancha, carne blanca y delicada"
+        },
+        {
+          name: "FILETE DE LUBINA SALVAJE",
+          price: "340",
+          description: "Lubina salvaje a la plancha",
+          detailedDescription: "Filete de lubina salvaje a la plancha, pesca salvaje, carne jugosa"
+        },
+        {
+          name: "SALMÓN A LA PLANCHA",
+          price: "340",
+          description: "Filete de salmón a la plancha",
+          detailedDescription: "Filete de salmón fresco a la plancha, rico en sabores"
+        },
+        {
+          name: "CIGALA A LA PLANCHA",
+          price: "450",
+          description: "Crustáceo premium a la plancha",
+          detailedDescription: "Cigala fresca a la plancha, carne delicada y dulce"
+        },
+        {
+          name: "SELECCIÓN DE PESCADOS: PESCADO DEL DÍA",
+          price: "580",
+          portion: "2 pers",
+          description: "Surtido de pescados frescos",
+          detailedDescription: "Selección del día de diferentes pescados a la plancha según la llegada"
+        }
+      ]
+    },
+    {
+      title: 'CARNES',
+      items: [
+        {
+          name: "BROCHETAS DE POLLO",
+          price: "120",
+          description: "Pollo marinado en brochetas",
+          detailedDescription: "Brochetas de pollo marinado y a la plancha, tiernas y aromáticas"
+        },
+        {
+          name: "BROCHETAS DE CARNE PICADA",
+          price: "140",
+          description: "Kefta a la plancha",
+          detailedDescription: "Brochetas de carne picada especiada, a la plancha a la tradición marroquí"
+        },
+        {
+          name: "BROCHETAS DE SOLOMILLO",
+          price: "220",
+          description: "Ternera premium en brochetas",
+          detailedDescription: "Brochetas de solomillo tierno, a la plancha al punto"
+        },
+        {
+          name: "POLLO EN TIRAS CON SALSA DE CHAMPIÑONES Y ARROZ BASMATI",
+          price: "260",
+          description: "Pollo con salsa de champiñones",
+          detailedDescription: "Pollo en tiras con salsa cremosa de champiñones, servido con arroz basmati aromático"
+        },
+        {
+          name: "ENTRECOT EN TIRAS CON SALSA DE CHAMPIÑONES Y ARROZ BASMATI",
+          price: "280",
+          description: "Ternera con salsa de champiñones",
+          detailedDescription: "Entrecot en tiras con salsa cremosa de champiñones, servido con arroz basmati"
+        },
+        {
+          name: "ENTRECOT A LA PLANCHA",
+          price: "280",
+          description: "Pieza de ternera a la plancha",
+          detailedDescription: "Entrecot de ternera a la plancha, jugoso y sabroso"
+        },
+        {
+          name: "SOLOMILLO A LA PLANCHA",
+          price: "380",
+          description: "Pieza noble de ternera",
+          detailedDescription: "Solomillo tierno a la plancha a la perfección"
+        }
+      ]
+    }
+  ];
+
+  // Componente de divisor elegante para reducir repetición
+  const ElegantDivider = () => (
+    <div className="flex items-center justify-center my-16">
+      <div className="h-px w-16 bg-amber-200/30"></div>
+      <div className="mx-3 text-amber-200/50">✦</div>
+      <div className="h-px w-16 bg-amber-200/30"></div>
+    </div>
+  );
+
+  return (
+    <section ref={menuRef} className="py-20 bg-[#3e4c52] text-amber-50 relative">
+      {/* Elementos de fondo */}
+      <div className="absolute inset-0 opacity-10"></div>
+      
+      {/* Contenido del menú */}
+      <div className="container mx-auto px-4">
+        {menuSections.map((section, index) => (
+          <div key={index}>
+            <PoissonViandesMenuSection title={section.title} items={section.items} />
+            {index < menuSections.length - 1 && <ElegantDivider />}
+          </div>
+        ))}
+      </div>
+      
+      {/* Divisor elegante inferior */}
+      <div className="flex items-center justify-center mt-20">
+        <div className="h-px w-24 bg-amber-200/40"></div>
+        <div className="mx-4 text-amber-200/60">✦</div>
+        <div className="h-px w-24 bg-amber-200/40"></div>
+      </div>
+    </section>
+  );
+}
