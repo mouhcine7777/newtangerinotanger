@@ -203,7 +203,7 @@ export default function RomeNewYorkMenu() {
           detailedDescription: "Un jardín mediterráneo sobre masa fina y crujiente"
         },
         {
-          name: "PIZZA DE ATÚN Y CEBOLLAS",
+          name: "PIZZA DE ATÚN Y CEBOLLA",
           price: "90",
           description: "Pizza mediterránea",
           detailedDescription: "Matrimonio armonioso entre el mar y la tierra sobre base tradicional"

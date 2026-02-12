@@ -190,13 +190,13 @@ export default function DessertsMenu() {
       title: '',
       items: [
         {
-          name: "CRÈME BRÛLÉE",
+          name: "CREMA QUEMADA",
           price: 80,
           description: "Clásico francés caramelizado",
           detailedDescription: "Suave crema de vainilla bajo una fina costra de azúcar caramelizado crujiente"
         },
         {
-          name: "HOJALDRE PRALINÉ CON BOLA DE HELADO DE VAINILLA",
+          name: "PROFITEROL CON PRALINA DE AVELLANA",
           price: 80,
           description: "Pastelería crujiente y helada",
           detailedDescription: "Matrimonio perfecto entre la ligereza del hojaldre, el crujiente del praliné y la suavidad del helado"
@@ -208,7 +208,7 @@ export default function DessertsMenu() {
           detailedDescription: "El equilibrio perfecto entre la vivacidad del limón y la dulzura del merengue"
         },
         {
-          name: "BIZCOCHO ESPONJOSO DE MARACUYÁ Y MANGO",
+          name: "PASTEL ESPONJOSO DE MARACUYÁ Y MANGO",
           price: 80,
           description: "Creación exótica y fresca",
           detailedDescription: "Viaje tropical en cada bocado, alianza refrescante de sabores soleados",
@@ -233,13 +233,13 @@ export default function DessertsMenu() {
           detailedDescription: "Dulzura glacial con notas de miel y frutos secos, tradición del sur revisitada"
         },
         {
-          name: "COULANT DE CHOCOLATE",
+          name: "DULCE DE CHOCOLATE",
           price: 80,
           description: "Corazón fundente irresistible",
           detailedDescription: "La indulgencia suprema para los amantes del chocolate, corazón fundente e intenso"
         },
         {
-          name: "COPA COULANT DE CHOCOLATE",
+          name: "COPA DE COULANT DE CHOCOLATE",
           price: 80,
           description: "Coulant revisitado en copa",
           detailedDescription: "Nuestro coulant signature presentado en versión helada para el doble de placer"
@@ -251,7 +251,7 @@ export default function DessertsMenu() {
           detailedDescription: "Nuestra cookie emblemática, crujiente por fuera y tierna por dentro"
         },
         {
-          name: "CAFÉ GOURMAND",
+          name: "CAFÉ GOURMET",
           price: 80,
           description: "Coulant de chocolate, helado de vainilla, crème brûlée",
           detailedDescription: "Trío goloso acompañado de un café, para saborear varios placeres en una sola degustación"

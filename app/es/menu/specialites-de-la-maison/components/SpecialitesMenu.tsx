@@ -186,14 +186,14 @@ export default function SpecialitesMenu() {
           detailedDescription: "Arroz bomba azafranado con una selección de verduras frescas de temporada, preparado según la tradición española"
         },
         {
-          name: "ARROZ MELOSO CON GAMBAS ROYALES",
+          name: "ARROZ MELOSO CON CARABINEROS",
           price: "350",
           portion: "1 pers",
           description: "Arroz cremoso con gambas royales",
           detailedDescription: "Arroz cremoso preparado con gambas royales, en un caldo aromático"
         },
         {
-          name: "PAELLA NEGRA CON TINTA DE SEPIA, GAMBAS Y ALCACHOFAS",
+          name: "PAELLA EN SU TINTA DE SEPIA, GAMBAS Y ALCACHOFAS",
           price: "350",
           portion: "2 pers",
           description: "Paella tradicional con tinta de sepia",

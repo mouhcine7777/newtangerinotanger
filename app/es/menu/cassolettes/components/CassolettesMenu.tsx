@@ -168,7 +168,7 @@ export default function CassolettesMenu() {
       title: 'CAZUELAS',
       items: [
         {
-          name: "CAZUELA DE CHAMPIÑONES AL AJILLO",
+          name: "CHAMPIÑONES",
           price: "70",
           description: "Champiñones salteados con ajo aromático",
           detailedDescription: "Champiñones frescos cocidos a fuego lento con ajo dorado, servidos en cazuela caliente"
@@ -186,13 +186,13 @@ export default function CassolettesMenu() {
           detailedDescription: "Gambas frescas salteadas en aceite de oliva aromatizado con ajo"
         },
         {
-          name: "CAZUELA DE ALMEJAS",
+          name: "ALMEJAS",
           price: "120",
           description: "Moluscos cocidos a fuego lento",
           detailedDescription: "Almejas frescas cocinadas en su sabroso jugo"
         },
         {
-          name: "CAZUELA DE CALAMARES EN SALSA DE TOMATE ESTILO TAJINE",
+          name: "CALAMARES",
           price: "160",
           description: "Calamares en salsa especiada",
           detailedDescription: "Calamares tiernos cocidos a fuego lento en salsa de tomate aromatizada con especias del tajine"
@@ -216,7 +216,7 @@ export default function CassolettesMenu() {
           detailedDescription: "Pescado merluza y mariscos cocidos a fuego lento con cebollas fundentes"
         },
         {
-          name: "PATATAS CON GAMBAS Y CALAMARES EN SALSA DE TOMATE",
+          name: "PATATAS CON GAMBAS Y CALAMARES A LA MARINERA",
           price: "180",
           description: "Guiso de mariscos mediterráneo",
           detailedDescription: "Patatas cocidas a fuego lento con gambas y calamares en una rica salsa de tomate"

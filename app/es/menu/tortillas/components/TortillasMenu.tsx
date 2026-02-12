@@ -180,7 +180,7 @@ export default function TortillasFrituresMenu() {
           description: 'Especialidad imprescindible de la cocina española'
         },
         {
-          name: 'TORTILLA ESPAÑOLA CON CHAMPIÑONES',
+          name: 'TORTILLA DE SETAS',
           price: '80',
           shortDescription: 'Variante gourmet con champiñones',
           description: 'Tortilla enriquecida con champiñones sabrosos'
@@ -192,13 +192,13 @@ export default function TortillasFrituresMenu() {
           description: 'Tortilla rellena de gambas tiernas y sabrosas'
         },
         {
-          name: 'TORTILLA ESPAÑOLA CON CHORIZO DE BELLOTA',
+          name: 'TORTILLA CON CHORIZO DE BELLOTA',
           price: '90',
           shortDescription: 'Tortilla con chorizo artesanal',
           description: 'Combinación perfecta entre tortilla y chorizo de calidad'
         },
         {
-          name: 'TORTILLA ESPAÑOLA CON MANCHEGO GRAN CÉSAR',
+          name: 'TORTILLA CON MANCHEGO GRAN CÉSAR',
           price: '90',
           shortDescription: 'Versión con queso premium',
           description: 'Tortilla noble con queso Manchego curado'
@@ -233,7 +233,7 @@ export default function TortillasFrituresMenu() {
           description: 'Croquetas doradas rellenas de pescado fresco'
         },
         {
-          name: 'PESCADO FRITO ADOBADO',
+          name: 'CAZÓN EN ADOBO',
           price: '80',
           shortDescription: 'Pescado de mar preparado',
           description: 'Filete de pescado adobado y luego frito a la perfección'
@@ -245,19 +245,19 @@ export default function TortillasFrituresMenu() {
           description: 'Boquerones dorados a la fritura mediterránea'
         },
         {
-          name: 'PECHUGA DE POLLO FRITA',
+          name: 'FINGERS DE POLLO',
           price: '90',
           shortDescription: 'Pollo empanado crujiente',
           description: 'Filetes de pollo tiernos cubiertos con un rebozado dorado'
         },
         {
-          name: 'GAMBAS EN TEMPURA',
+          name: 'TEMPURA DE GAMBAS',
           price: '140',
           shortDescription: 'Gambas en masa japonesa',
           description: 'Gambas envueltas en tempura ligera y crujiente'
         },
         {
-          name: 'CABEZAS DE CALAMARES',
+          name: 'PATAS DE CALAMARES',
           price: '140',
           shortDescription: 'Especialidad de cefalópodos fritos',
           description: 'Cabezas de calamares fritas, tiernas y sabrosas'
@@ -269,7 +269,7 @@ export default function TortillasFrituresMenu() {
           description: 'Calamares tiernos envueltos en un rebozado dorado'
         },
         {
-          name: 'CHIPIRONES FRITOS',
+          name: 'PUNTILLITAS FRITAS',
           price: '160',
           shortDescription: 'Calamares jóvenes crujientes',
           description: 'Chipirones tiernos fritos a la perfección'

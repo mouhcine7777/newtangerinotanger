@@ -180,13 +180,13 @@ export default function TapasEntreesMenu() {
           detailedDescription: 'Jamón de calidad superior con sabores refinados'
         },
         {
-          name: 'QUESO MANCHEGO AÑEJO D.O.P.',
+          name: 'MANCHEGO DE OVEJA EL GRAN CÉSAR D.O',
           description: 'Queso español auténtico',
           price: 180,
           detailedDescription: 'Queso curado con sabores intensos y característicos'
         },
         {
-          name: 'TABLA DE QUESOS',
+          name: 'PLATO DE QUESO',
           description: 'Azul, brie, cabra, parmesano, manchego',
           price: 190,
           detailedDescription: 'Selección refinada de quesos europeos'
@@ -197,7 +197,7 @@ export default function TapasEntreesMenu() {
       title: 'SOPAS',
       items: [
         {
-          name: 'SOPA DE MARISCOS',
+          name: 'SOPA DE MARISCO TANGERINO',
           description: 'Caldo de mar aromático',
           price: 80,
           detailedDescription: 'Sopa rica en sabores marinos y mariscos'
@@ -208,13 +208,13 @@ export default function TapasEntreesMenu() {
       title: 'TAPAS',
       items: [
         {
-          name: 'TAPENADE CASERO DE ACEITUNAS NEGRAS',
+          name: 'TAPENADE CASERA DE ACEITUNAS NEGRAS',
           description: 'Media ración · 30 Dhs | Ración · 60 Dhs',
           price: '30 / 60',
           detailedDescription: 'Pasta de aceitunas negras tradicional preparada según nuestra receta casera'
         },
         {
-          name: 'TOMATE AL AJO',
+          name: 'TOMATE CON AJO PICADO',
           description: 'Entrante simple y sabroso',
           price: 50,
           detailedDescription: 'Tomates frescos realzados con ajo aromático'
@@ -238,7 +238,7 @@ export default function TapasEntreesMenu() {
           detailedDescription: 'Pequeña hamburguesa perfecta para compartir'
         },
         {
-          name: 'GUACAMOLE Y NACHOS',
+          name: 'GUACAMOLE CON TORTILLA CHIPS',
           description: 'Aguacate machacado con nachos crujientes',
           price: 70,
           detailedDescription: 'Guacamole fresco acompañado de nachos dorados'
@@ -250,19 +250,19 @@ export default function TapasEntreesMenu() {
           detailedDescription: 'Boquerones frescos marinados en vinagre aromático'
         },
         {
-          name: 'TOMATE, CEBOLLA Y ATÚN',
+          name: 'TOMATE CON CEBOLLA Y VENTRESCA',
           description: 'Ensalada mediterránea fresca',
           price: 80,
           detailedDescription: 'Mezcla armoniosa de sabores mediterráneos'
         },
         {
-          name: 'PIMIENTOS DE PADRÓN',
+          name: 'PIMIENTOS DEL PADRÓN',
           description: 'Especialidad gallega',
           price: 80,
           detailedDescription: 'Pequeños pimientos verdes asados, ligeros y sabrosos'
         },
         {
-          name: 'PIMIENTOS ROJOS AL HORNO CON ATÚN',
+          name: 'ASADILLO DE PIMIENTOS CON VENTRESCA',
           description: 'Verduras rellenas mediterráneas',
           price: 90,
           detailedDescription: 'Pimientos rojos asados rellenos de atún sabroso'
@@ -274,7 +274,7 @@ export default function TapasEntreesMenu() {
           detailedDescription: 'Mezcla refrescante de mariscos sazonados'
         },
         {
-          name: 'TOSTA DE SOLOMILLO',
+          name: 'MONTADITO DE SOLOMILLO DE TERNERA',
           description: 'Tostada con carne premium',
           price: 90,
           detailedDescription: 'Pan tostado cubierto con solomillo tierno'
@@ -303,13 +303,13 @@ export default function TapasEntreesMenu() {
       title: 'ENSALADAS Y ENTRANTES',
       items: [
         {
-          name: 'ENSALADA DE VERDURAS CRUDAS',
+          name: 'ENSALADA MULTICOLOR',
           description: 'Verduras frescas variadas',
           price: 80,
           detailedDescription: 'Mezcla de verduras crudas de temporada y vinagreta'
         },
         {
-          name: 'ENSALADA DE QUESO DE CABRA, HIGOS Y JAMÓN',
+          name: 'ENSALADA DE QUESO DE CABRA, BREVAS Y JAMÓN',
           description: 'Mezcla dulce-salada refinada',
           price: 120,
           detailedDescription: 'Ensalada compuesta que combina queso de cabra, higos dulces y jamón'
@@ -368,7 +368,7 @@ export default function TapasEntreesMenu() {
           detailedDescription: 'Atún rojo fresco cortado a cuchillo y sazonado'
         },
         {
-          name: 'TATAKI DE ATÚN ROJO',
+          name: 'TATAKI DE ATÚN DE ALMADRABA',
           description: 'Atún medio cocido a la japonesa',
           price: 180,
           detailedDescription: 'Atún rojo sellado rápidamente, tierno por dentro, sabroso por fuera'

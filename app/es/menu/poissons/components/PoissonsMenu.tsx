@@ -180,14 +180,14 @@ export default function PoissonViandesMenu() {
       title: 'PESCADOS',
       items: [
         {
-          name: "GAMBAS ROYALES A LA PLANCHA",
+          name: "CARABINERO",
           price: "200",
           portion: "1 pieza",
           description: "Gamba grande a la plancha",
           detailedDescription: "Gamba royal fresca a la plancha a la perfección, ligeramente sazonada"
         },
         {
-          name: "PEZ ESPADA A LA PLANCHA",
+          name: "PEZ EMPERADOR",
           price: "260",
           description: "Filete de pez espada a la plancha",
           detailedDescription: "Filete de pez espada a la plancha, carne firme y sabrosa"
@@ -199,37 +199,37 @@ export default function PoissonViandesMenu() {
           detailedDescription: "Calamares frescos a la plancha, acompañados de limón y aceite de oliva"
         },
         {
-          name: "LENGUADO A LA PLANCHA",
+          name: "LENGUADO",
           price: "280",
           description: "Pescado plano delicado",
           detailedDescription: "Lenguado fresco a la plancha, carne fina y refinada"
         },
         {
-          name: "ATÚN ROJO MEDIO COCIDO",
+          name: "ATÚN ROJO",
           price: "280",
           description: "Atún sellado a la plancha",
           detailedDescription: "Filete de atún rojo sellado, tierno en el centro y sabroso"
         },
         {
-          name: "SAN PEDRO A LA PLANCHA",
+          name: "SAN PEDRO",
           price: "320",
           description: "Pescado noble a la plancha",
           detailedDescription: "San Pedro fresco a la plancha, carne blanca y delicada"
         },
         {
-          name: "FILETE DE LUBINA SALVAJE",
+          name: "LUBINA A LA PLANCHA",
           price: "340",
           description: "Lubina salvaje a la plancha",
           detailedDescription: "Filete de lubina salvaje a la plancha, pesca salvaje, carne jugosa"
         },
         {
-          name: "SALMÓN A LA PLANCHA",
+          name: "SALMÓN",
           price: "340",
           description: "Filete de salmón a la plancha",
           detailedDescription: "Filete de salmón fresco a la plancha, rico en sabores"
         },
         {
-          name: "CIGALA A LA PLANCHA",
+          name: "CIGALA (450 GR)",
           price: "450",
           description: "Crustáceo premium a la plancha",
           detailedDescription: "Cigala fresca a la plancha, carne delicada y dulce"
@@ -247,43 +247,43 @@ export default function PoissonViandesMenu() {
       title: 'CARNES',
       items: [
         {
-          name: "BROCHETAS DE POLLO",
+          name: "PINCHOS DE POLLO",
           price: "120",
           description: "Pollo marinado en brochetas",
           detailedDescription: "Brochetas de pollo marinado y a la plancha, tiernas y aromáticas"
         },
         {
-          name: "BROCHETAS DE CARNE PICADA",
+          name: "PINCHOS CARNE PICADA",
           price: "140",
           description: "Kefta a la plancha",
           detailedDescription: "Brochetas de carne picada especiada, a la plancha a la tradición marroquí"
         },
         {
-          name: "BROCHETAS DE SOLOMILLO",
+          name: "PINCHOS DE SOLOMILLO",
           price: "220",
           description: "Ternera premium en brochetas",
           detailedDescription: "Brochetas de solomillo tierno, a la plancha al punto"
         },
         {
-          name: "POLLO EN TIRAS CON SALSA DE CHAMPIÑONES Y ARROZ BASMATI",
+          name: "EMINCÉ DE POLLO ACOMPAÑADO DE UNA SALSA DE CHAMPIÑONES Y ARROZ BASMATI",
           price: "260",
           description: "Pollo con salsa de champiñones",
           detailedDescription: "Pollo en tiras con salsa cremosa de champiñones, servido con arroz basmati aromático"
         },
         {
-          name: "ENTRECOT EN TIRAS CON SALSA DE CHAMPIÑONES Y ARROZ BASMATI",
+          name: "ENTRECOT TRINCHADO CON SALSA DE SETAS Y ARROZ BASMATI",
           price: "280",
           description: "Ternera con salsa de champiñones",
           detailedDescription: "Entrecot en tiras con salsa cremosa de champiñones, servido con arroz basmati"
         },
         {
-          name: "ENTRECOT A LA PLANCHA",
+          name: "ENTRECOT DE TERNERA A LA BARBACOA",
           price: "280",
           description: "Pieza de ternera a la plancha",
           detailedDescription: "Entrecot de ternera a la plancha, jugoso y sabroso"
         },
         {
-          name: "SOLOMILLO A LA PLANCHA",
+          name: "SOLOMILLO DE TERNERA A LA BARBACOA",
           price: "380",
           description: "Pieza noble de ternera",
           detailedDescription: "Solomillo tierno a la plancha a la perfección"
