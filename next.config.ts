@@ -1,6 +1,5 @@
-import type { NextConfig } from "next";
-
-const nextConfig: NextConfig = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   trailingSlash: true,
   output: 'export', // Enables static export
   images: {
@@ -8,7 +7,7 @@ const nextConfig: NextConfig = {
   },
   typescript: {
     ignoreBuildErrors: true, // Ignores TypeScript errors during build
-  }
+  },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
