@@ -170,7 +170,6 @@ export default function BieresMenu() {
       y: 0,
       transition: {
         duration: 0.3,
-        ease: "easeOut"
       }
     }
   };

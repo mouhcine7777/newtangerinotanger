@@ -241,16 +241,14 @@ export default function CocktailsMenu() {
 
   const shots: CocktailItem[] = [
     {
-      name: "Par 4",
+      name: "PAR 4",
       price: "300",
-      ingredients: "Passion Vodka, Tequila Camino, Sambuca, Jagermeister",
-      description: "Sélection de 4 shots pour une soirée mémorable"
+      ingredients: "Passion Vodka, Tequila Camino, Sambuca, Jagermeister"
     },
     {
-      name: "Par mètre",
+      name: "PAR MÉTRE",
       price: "800",
-      ingredients: "Passion Vodka, Tequila Camino, Sambuca, Jagermeister",
-      description: "Le défi ultime pour les vrais connaisseurs"
+      ingredients: "Passion Vodka, Tequila Camino, Sambuca, Jagermeister"
     }
   ];
 
