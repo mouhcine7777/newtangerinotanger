@@ -60,14 +60,14 @@ export default function MenuCategorySection() {
     },
     {
       id: 3,
-      title: "Bières et boissons",
+      title: "Bières et Boissons",
       description: "Bières artisanales et boissons fraîches",
       image: "/beer.jpg",
       slug: "beers"
     },
     {
       id: 4,
-      title: "Tapas et entrées",
+      title: "Tapas et Entrées",
       description: "Délicieuses entrées et tapas à partager",
       image: "/tapas.jpg",
       slug: "tapas"
