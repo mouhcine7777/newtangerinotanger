@@ -19,7 +19,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Tangerino Rabat",
+  title: "Tangerino Tanger",
   description: "Authentic Flavors, Fresh Ingredients, Unforgettable Dining Experience",
 };
 
